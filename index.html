@@ -4,24 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>c4 Bases Javascript</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Contador en React</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
 </head>
 
 <body>
-    <h1>C4 Bases Javascript</h1>
+    <div id="root"></div>
 
-    <h2>Productos</h2>
-    <form action="" id="form">
-        <input type="text" id="input-search">
-        <button>Buscar</button>
-    </form>
+    <script>
+        // Definición del componente de contador 
+        function Counter() {
+            const [count, setCount] = React.useState(0);
 
-    <div id="container-productos">
-    </div>
+            const increment = () => {
+                setCount(count + 1);
+            };
+            const decrement = () => {
+                setCount(count - 1);
+            };
+            return (
+                React.createElement('div', null,
+                    React.createElement('h1', null, 'Contador'),
+                    React.createElement('p', null, 'Valor: ' + count),
+                    React.createElement('button', { onClick: increment }, 'Incrementar'),
+                    React.createElement('button', { onClick: decrement }, 'Decrementar'))
+            );
+        }
+        // Renderizado del componente en el DOM virtual
+        ReactDOM.render(React.createElement(Counter), document.getElementById('root')); 
+    </script>
 
     <!-- <script src="./scripts/variables.js"></script> -->
-    <script src="./scripts/practica/filtro-productos.js"></script>
+    <!-- <script src="./scripts/practica/filtro-productos.js"></script> -->
 </body>
 
 </html>

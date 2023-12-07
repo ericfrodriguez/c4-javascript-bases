@@ -70,3 +70,17 @@ const renderizarProductos = (productos) => {
 
 
 
+
+// div value="+"
+// div value="-"
+
+// funcion suma(num1, num2) 
+// funcion resta(num1, num2) 
+
+// Obtengo div con algun tipo de selector
+// Obtengo el valor del div: +, -, /, *. boton.value
+
+// Usar condicional para identificar la operacion
+// Ejecuto la operacion correspondiente
+
+
